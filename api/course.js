@@ -13,6 +13,12 @@ export default {
       url: '/api/edu/subject/nested-list',
       method: 'get'
     })
+  },
+  getById(id) {
+    return request({
+      url: `/api/edu/course/get/${id}`,
+      method: 'get'
+    })
   }
 }
 
