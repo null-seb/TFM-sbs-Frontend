@@ -4,11 +4,10 @@
     <section class="container">
       <header class="comm-title">
         <h2 class="fl tac">
-          <span class="c-333">讲师介绍</span>
+          <span class="c-333">College Introduction</span>
         </h2>
       </header>
       <div class="t-infor-wrap">
-        <!-- 讲师基本信息 开始 -->
         <section class="fl t-infor-box c-desc-content">
           <div class="mt20 ml20">
             <section class="t-infor-pic">
@@ -17,7 +16,7 @@
             <h3 class="hLh30">
               <span class="fsize24 c-333">{{ college.name }}
                 &nbsp;
-                {{ college.level===1?'高级讲师':'首席讲师' }}
+                {{ college.level===1?'Top500':'Top50' }}
               </span>
             </h3>
             <section class="mt10">
@@ -29,14 +28,13 @@
             <div class="clear"/>
           </div>
         </section>
-        <!-- /讲师基本信息 结束 -->
         <div class="clear"/>
       </div>
       <section class="mt30">
         <div>
           <header class="comm-title all-college-title c-course-content">
             <h2 class="fl tac">
-              <span class="c-333">主讲课程</span>
+              <span class="c-333">Courses</span>
             </h2>
             <section class="c-tab-title">
               <a href="javascript: void(0)">&nbsp;</a>
@@ -45,7 +43,7 @@
           <!-- 无数据提示 开始-->
           <section v-if="courseList.length===0" class="no-data-wrap">
             <em class="icon30 no-data-ico">&nbsp;</em>
-            <span class="c-666 fsize14 ml10 vam">没有相关数据，小编正在努力整理中...</span>
+            <span class="c-666 fsize14 ml10 vam">No relevant data is available and efforts are underway to increase it....</span>
           </section>
           <!-- /无数据提示 结束-->
 
@@ -57,7 +55,7 @@
                   <section class="course-img">
                     <img :src="course.cover" class="img-responsive" alt="">
                     <div class="cc-mask">
-                      <a :href="'/course/'+course.id" title="开始学习" target="_blank" class="comm-btn c-btn-1">开始学习</a>
+                      <a :href="'/course/'+course.id" title="开始学习" target="_blank" class="comm-btn c-btn-1">Start</a>
                     </div>
                   </section>
                   <h3 class="hLh30 txtOf mt10">
@@ -75,7 +73,6 @@
         </div>
       </section>
     </section>
-    <!-- /讲师介绍 结束 -->
   </div>
 </template>
 

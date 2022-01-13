@@ -1,6 +1,5 @@
 <template>
   <div id="aCoursesList" className="bg-fa of">
-    <!-- 讲师列表 开始 -->
     <section className="container">
       <header className="comm-title">
         <h2 className="fl tac">
@@ -44,7 +43,6 @@
         </div>
       </section>
     </section>
-    <!-- /讲师列表 结束 -->
   </div>
 </template>
 <script>
