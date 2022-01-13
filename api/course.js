@@ -19,6 +19,13 @@ export default {
       url: `/api/edu/course/get/${id}`,
       method: 'get'
     })
+  },
+  getPlayAuth(vid) {
+    return request({
+      baseURL: 'http://localhost:8130',
+      url: `/api/vod/media/get-play-auth/${vid}`,
+      method: 'get'
+    })
   }
 }
 
