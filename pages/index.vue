@@ -1,6 +1,16 @@
 <template>
-
   <div>
+    <div class="swiper-wrapper">
+      <div
+        v-for="topBannerAd in topBannerAdList"
+        :key="topBannerAd.id"
+        :style="'background: ' + topBannerAd.color"
+        class="swiper-slide">
+        <a target="_blank" href="/">
+          <img :src="topBannerAd.imageUrl" :alt="topBannerAd.title">
+        </a>
+      </div>
+    </div>
     <div id="aCoursesList">
       <!-- 网校课程 开始 -->
       <div>
@@ -317,7 +327,16 @@
 </template>
 
 <script>
+import indexApi from '~/api/index'
 export default {
+  async asyncData() {
+    // 获取首页banner数据
+    const topBannerAdListResponse = await indexApi.getTopBannerAdList()
+    const topBannerAdList = topBannerAdListResponse.data.items
+    return {
+      topBannerAdList
+    }
+  },
   data() {
     return {
       swiperOption: {
