@@ -12,7 +12,7 @@ const service = axios.create({
 service.interceptors.request.use(
   config => {
     // debugger
-    if (cookie.get('sbs_token')) { // 如果cookie中包含guli_token
+    if (cookie.get('sbs_jwt_token')) { // 如果cookie中包含guli_token
       // 则发送后端api请求的时候携带token
       config.headers['token'] = cookie.get('sbs_jwt_token')
     }

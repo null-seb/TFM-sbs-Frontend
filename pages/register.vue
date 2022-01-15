@@ -37,7 +37,7 @@
             @click="submitRegister()">
         </div>
         <p class="sign-up-msg">
-          点击 “注册” 即表示您同意并愿意遵守简书
+          点击 “注册” 即表示您同意并愿意遵守
           <br>
           <a target="_blank" href="http://www.jianshu.com/p/c44d171298ce">用户协议</a>
           和
